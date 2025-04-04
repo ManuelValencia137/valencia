@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta página es un ejemplo de cómo usar los meta tags para mejorar la accesibilidad, indexación y compartición en redes sociales.">
+    <meta name="keywords" content="meta tags, HTML, SEO, Open Graph, Twitter Cards">
+    
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Aprendiendo sobre Meta Tags">
+    <meta property="og:description" content="Descubre cómo los meta tags pueden mejorar la visibilidad de tu sitio web en Google y en redes sociales.">
+    <meta property="og:image" content="https://via.placeholder.com/600x400?text=Imagen+de+Meta+Tags">
+    <meta property="og:url" content="https://www.ejemplo.com/meta_tags">
+    
+    <meta name="twitter:title" content="Aprendiendo sobre Meta Tags">
+    <meta name="twitter:description" content="Descubre cómo los meta tags pueden mejorar la visibilidad de tu sitio web en Google y en redes sociales.">
+    <meta name="twitter:image" content="https://via.placeholder.com/600x400?text=Imagen+de+Meta+Tags">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>Aprendiendo sobre Meta Tags</title>
+    
+    <!-- Cargando la fuente More Sugar -->
+    <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'More Sugar', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2rem;
+            position: relative; /* Asegura que el logo se posicione respecto al header */
+        }
+
+        header img.logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px; /* Aumentando el tamaño de la imagen */
+            height: auto;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5rem;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="tags.png" alt="Logo" class="logo">
+        <h1>Bienvenido a la Página de Meta Tags</h1>
+    </header>
+
+    <section>
+        <p>En este sitio web exploramos la importancia de los meta tags para mejorar el posicionamiento en motores de búsqueda y la interacción en redes sociales.</p>
+    </section>
+
+    <section>
+        <h2>¿Qué son los Meta Tags?</h2>
+        <p>Los meta tags (o etiquetas meta) son fragmentos de código HTML que se utilizan para proporcionar información adicional sobre una página web.</p>
+    </section>
+
+    <section>
+        <h2>¿Para qué se usan?</h2>
+        <p>Los meta tags se usan para varios propósitos en el desarrollo web y en la optimización para motores de búsqueda (SEO). Aunque no afectan directamente la apariencia de la página para los usuarios, tienen un impacto importante en cómo los motores de búsqueda y otras aplicaciones interpretan y manejan el contenido de la página.</p>
+    </section>
+
+    <section>
+        <h2>¿Cómo se usan?</h2>
+        <p>En conclusión, los meta tags son herramientas esenciales en el desarrollo web, ya que proporcionan información crucial sobre una página a los motores de búsqueda, navegadores y otras plataformas. Aunque no afectan directamente la apariencia visual de la página para los usuarios, juegan un papel fundamental en la optimización para motores de búsqueda (SEO), la compatibilidad con dispositivos móviles, y el control del comportamiento del contenido en redes sociales y otros entornos.</p>
+    </section>
+
+    <section>
+        <h2>Preguntas de Reflexión</h2>
+        <ul>
+            <li><strong>¿Por qué es importante incluir el meta tag <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>?</strong>
+                <p>Este meta tag asegura que la página se adapta adecuadamente a diferentes tamaños de pantalla, especialmente en dispositivos móviles, mejorando la experiencia de usuario y la accesibilidad.</p>
+            </li>
+            <li><strong>¿Cómo ayudan los meta tags a mejorar el posicionamiento en Google?</strong>
+                <p>Los meta tags proporcionan información clave sobre el contenido de la página, lo que ayuda a los motores de búsqueda a indexarla correctamente y a ofrecerla en los resultados relevantes.</p>
+            </li>
+            <li><strong>¿Qué sucede si no se incluye una meta tag description en la página?</strong>
+                <p>Si no se incluye una meta tag description, los motores de búsqueda podrían generar una descripción automática basada en el contenido de la página, lo que podría no ser tan relevante o atractiva para los usuarios.</p>
+            </li>
+            <li><strong>¿Cómo los meta tags Open Graph mejoran la forma en que se comparte una página en Facebook?</strong>
+                <p>Los meta tags Open Graph permiten definir cómo se muestra una página cuando se comparte en Facebook, incluyendo el título, la descripción y la imagen, mejorando la apariencia y el atractivo del enlace.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
