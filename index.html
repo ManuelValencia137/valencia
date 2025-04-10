@@ -5,31 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Esta página es un ejemplo de cómo usar los meta tags para mejorar la accesibilidad, indexación y compartición en redes sociales.">
     <meta name="keywords" content="meta tags, HTML, SEO, Open Graph, Twitter Cards">
-    
+
+    <!-- Meta tags de indexación -->
     <meta name="robots" content="index, follow">
-    
+
+    <!-- Meta tags para redes sociales (Open Graph y Twitter Cards) -->
     <meta property="og:title" content="Aprendiendo sobre Meta Tags">
     <meta property="og:description" content="Descubre cómo los meta tags pueden mejorar la visibilidad de tu sitio web en Google y en redes sociales.">
     <meta property="og:image" content="https://via.placeholder.com/600x400?text=Imagen+de+Meta+Tags">
     <meta property="og:url" content="https://www.ejemplo.com/meta_tags">
-    
+
     <meta name="twitter:title" content="Aprendiendo sobre Meta Tags">
     <meta name="twitter:description" content="Descubre cómo los meta tags pueden mejorar la visibilidad de tu sitio web en Google y en redes sociales.">
     <meta name="twitter:image" content="https://via.placeholder.com/600x400?text=Imagen+de+Meta+Tags">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <title>Aprendiendo sobre Meta Tags</title>
-    
-    <!-- Cargando la fuente More Sugar -->
-    <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
-    
+
     <style>
+        /* Diseño global */
         body {
-            font-family: 'More Sugar', cursive; /* Usamos la fuente More Sugar */
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+        }
+
+        header, section, footer {
+            display: none; /* Ocultar el contenido principal al inicio */
         }
 
         header {
@@ -38,16 +42,6 @@
             text-align: center;
             padding: 20px 0;
             font-size: 2rem;
-            position: relative; /* Asegura que el logo se posicione respecto al header */
-        }
-
-        header img.logo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 100px; /* Aumentando el tamaño de la imagen */
-            height: auto;
-            z-index: 1000;
         }
 
         h1 {
@@ -65,14 +59,6 @@
         h2 {
             color: #007bff;
             margin-bottom: 15px;
-            display: inline-block; /* Asegura que la imagen esté al lado del texto */
-        }
-
-        h2 img {
-            width: 100px; /* Tamaño de la imagen */
-            height: auto;
-            vertical-align: middle; /* Alinea la imagen con el texto */
-            margin-left: 10px; /* Espacio entre el texto y la imagen */
         }
 
         ul {
@@ -86,6 +72,10 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li p {
+            margin: 5px 0;
         }
 
         footer {
@@ -103,6 +93,7 @@
             font-size: 0.9rem;
         }
 
+        /* Estilo de enlaces */
         a {
             color: #007bff;
             text-decoration: none;
@@ -111,7 +102,8 @@
         a:hover {
             text-decoration: underline;
         }
-        
+
+        /* Responsividad */
         @media (max-width: 768px) {
             header {
                 font-size: 1.5rem;
@@ -126,12 +118,57 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* Estilos para la pantalla de carga */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: background-color 1s ease-in-out;
+        }
+
+        #sun {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, yellow, transparent);
+            border-radius: 50%;
+            box-shadow: 0 0 30px 10px yellow, 0 0 60px 20px yellow;
+        }
+
+        @keyframes explode {
+            0%, 90% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes illuminate {
+            0% {
+                background-color: black;
+            }
+            100% {
+                background-color: white;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <div id="loading-screen">
+        <div id="sun"></div>
+    </div>
+
     <header>
-        <img src="tags.png" alt="Logo" class="logo">
         <h1>Bienvenido a la Página de Meta Tags</h1>
     </header>
 
@@ -147,6 +184,7 @@
     <section>
         <h2>¿Para qué se usan?</h2>
         <p>Los meta tags se usan para varios propósitos en el desarrollo web y en la optimización para motores de búsqueda (SEO). Aunque no afectan directamente la apariencia de la página para los usuarios, tienen un impacto importante en cómo los motores de búsqueda y otras aplicaciones interpretan y manejan el contenido de la página.</p>
+        <p>Los meta tags se utilizan dentro del código HTML de una página web, específicamente dentro de la sección <code>&lt;head&gt;</code> del documento. Esto asegura que la información proporcionada por los meta tags esté disponible antes de que se cargue el contenido visible de la página. Aquí te explico cómo usarlos y algunos ejemplos básicos.</p>
     </section>
 
     <section>
@@ -176,5 +214,20 @@
         <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
     </footer>
 
+    <script>
+        // Mostrar el contenido principal después de 5 segundos
+        setTimeout(function() {
+            document.getElementById('sun').style.animation = 'explode 1s ease-in-out forwards';
+            document.getElementById('loading-screen').style.animation = 'illuminate 1s ease-in-out forwards';
+            setTimeout(function() {
+                document.querySelectorAll('header, section, footer').forEach(function(element) {
+                    element.style.display = 'block';
+                });
+                document.getElementById('loading-screen').style.display = 'none';
+            }, 1000); // Esperar 1 segundo para que termine la animación de explosión
+        }, 5000);
+    </script>
+
 </body>
 </html>
+
